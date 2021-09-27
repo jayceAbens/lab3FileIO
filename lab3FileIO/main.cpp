@@ -37,12 +37,16 @@ int main()
 	cout << "Mean = " << calcMean(num1, num2, num3, num4) << endl;	// calls the calcMean function and outputs result to the screen
 	cout << "Population Standard Deviation = " << calcPopStdDeviation(num1, num2, num3, num4) << endl << endl;	// calls the calcStdDeviation function and outputs result to the screen
 	cout << "Calculations saved to - " << outputFileName << endl << endl; // informs the user where it will save the calculations
-	outFile << "Mean = " << calcMean(num1, num2, num3, num4) << endl << "Population Standard Deviation = " << calcPopStdDeviation(num1, num2, num3, num4); // saves the function results to the output file
+	outFile << "Results from: " << inputFileName << endl;
+	outFile << "Mean = " << calcMean(num1, num2, num3, num4) << endl << "Population Standard Deviation = " << calcPopStdDeviation(num1, num2, num3, num4) << endl << endl; // saves the function results to the output file
 
 	cout << "Please input 4 integers separated by spaces. Press enter to confirm." << endl << endl;	// prompts the user to enter 4 integers in a format understandable by the program
 	cin  >> num1 >> num2 >> num3 >> num4; // stores the user input
 	cout << endl << "Mean = " << calcMean(num1, num2, num3, num4) << endl;	// calls the calcMean function and outputs result to the screen
 	cout << "Population Standard Deviation = " << calcPopStdDeviation(num1, num2, num3, num4) << endl << endl; // calls the calcStdDeviation function and outputs result to the screen
+	cout << "Calculations saved to - " << outputFileName << endl << endl;
+	outFile << "Results from user input: " << endl;
+	outFile << "Mean = " << calcMean(num1, num2, num3, num4) << endl << "Population Standard Deviation = " << calcPopStdDeviation(num1, num2, num3, num4); // saves the function results to the output file
 
 	inFile.close();		// closes in file stream
 	outFile.close();	// closes out file stream
